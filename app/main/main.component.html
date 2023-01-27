@@ -1,0 +1,13 @@
+<div class="block" id="test">
+    <div class="pixel" *ngFor ="let item of indexArr" [id] = "item"  (click)="chouseCell($event)"
+    (dblclick)="Paint()"></div>
+</div>
+<div class="footter">
+    <div class="colors">
+        <div class="color" *ngFor = 'let item of colors' (click)="SaveColor($event)"
+        [style]="{'background-color': item}"></div>
+    </div>
+    <div class="btns">
+        <button class="paint" (click)="Paint()">Paint</button>
+    </div>
+</div>
